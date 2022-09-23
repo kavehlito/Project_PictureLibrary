@@ -1,0 +1,105 @@
+body {
+    background-color: lightgrey;
+}
+
+.toolbar {
+    border-bottom: 1px solid #bfbfbf;
+    padding-right: 20px;
+    background-color: lightgrey;
+    box-shadow: 0 1px 5px #bfbfbf;
+}
+
+.imageGallery {
+    gap: 20px;
+}
+
+.imageGallery .column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.card-link, 
+.card-link:link, 
+.card-link:visited, 
+.card-link:hover, 
+.card-link:active {
+    text-decoration: none;
+    color: #212529;
+}
+
+.card, .card-img, .card-img-top {
+    border-radius: 0;
+}
+
+.card {
+    width: 100%;
+}
+
+.two-columns, .three-columns, .four-columns {
+    display: none;
+}
+
+@media (min-width: 610px) {
+    .one-column {
+        display: none;
+    }
+    .two-columns {
+        display: flex;
+    }
+}
+
+@media (min-width: 910px) {
+    .two-columns {
+        display: none;
+    }
+    .three-columns {
+        display: flex;
+    }
+}
+
+@media (min-width: 1210px) {
+    .three-columns {
+        display: none;
+    }
+    .four-columns {
+        display: flex;
+    }
+}
+
+.one-column .column {
+    width: 100%;
+}
+
+.two-columns .column {
+    width: 50%;
+    width: calc(50% - 20px);
+}
+
+.three-columns .column {
+    width: 33%;
+    width: calc(33% - 20px);
+}
+
+.four-columns .column {
+    width: 25%;
+    width: calc(25% - 20px);
+}
+
+.ellipsis-clip {
+    max-height: 84px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-check-input:checked {
+    background-color: rgb(33, 37, 41);
+    border-color: rgb(33, 37, 41);
+    user-select: none;
+}
+
+.form-switch {
+	padding-left: 0;
+}

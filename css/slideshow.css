@@ -1,0 +1,20 @@
+body{
+        background-color: lightgrey;
+  
+}
+
+.carousel, .carousel-inner {
+    height: calc(100vh - 12.875rem);
+    width: auto;
+}
+
+.carousel-item {
+	height: 100%;
+	width: 100%;
+}
+
+.carousel-item img {
+	object-fit: contain;
+	object-position: center;
+	height: 100%;
+}

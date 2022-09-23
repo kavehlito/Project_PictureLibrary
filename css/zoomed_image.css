@@ -1,0 +1,225 @@
+body {
+    background-color: lightgray;
+}
+
+p {
+    font-size: 20px;
+}
+
+input {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Flexbox for Title and Edit button */
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+#titleContainer {
+    flex-direction: row-reverse;
+}
+
+.image-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Edit button */
+.material-symbols-outlined {
+  color: black;
+  background-color: lightgray;
+  border-radius: 15%;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/* Image */
+.main-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: auto;
+}
+
+/* Image description flexbox*/
+.image-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: darkgray;
+    border-radius: 5px;
+    border-color: black;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 950px) {
+    .image-description {
+        max-width: 95%;
+        font-size: 15px;
+    }
+    .comment-box {
+        padding-top: 100px;
+        max-width: 95%;
+    }
+    .main-image {
+        min-width: 80%;
+    }
+}
+
+/* Comment box */
+.comment-box {
+    margin-top: 200px;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+.comment-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.comment-box input {
+    background-color: darkgray;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.comment-box textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px; 
+}
+
+.comment-box button {
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: 50%;
+    border-radius: 5%;
+    margin-left : 35%;
+}
+
+/* Comment section */
+.comment-section {
+    display: flex;
+    background-color: darkgray;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    margin-top: 5px;
+    margin-left: 50%;
+}
+
+.comment-section button {
+    margin-left: 200%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Star rating */
+.star-rating {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 20px auto;
+    position: relative;
+}
+
+input:not(:checked)~ label:hover~ label {
+    color:#535a5182; 
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating > label {
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: black;
+}
+
+.star-rating label:hover {
+    color: #f1efec;
+    transition: 0.2s ease;
+    opacity: 50%;
+}
+
+.star-rating label:active::before {
+    transform:scale(1.1);
+}
+
+.star-rating label::before {
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+}
+
+.star-rating input:checked ~ label:before {
+    content:'\2605';
+}
+
+/* Pop-up for edit image title */
+.popup-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup-content {
+    width: 500px;
+    height: auto;
+    background-color: darkgray;
+    border-radius: 40px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+button{
+    background-color: black;
+    color: white;
+    margin: 8px 6px;
+    border-radius: 6px;
+    }

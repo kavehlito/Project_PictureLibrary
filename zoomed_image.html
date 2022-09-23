@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
+        crossorigin="anonymous">
+        <link href="css/zoomed_image.css" rel="stylesheet">
+        <link rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">      
+      </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Picture Album</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="rating_albums.html">Sort by rating</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="new_album.html">New album</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="upload_image.html">Upload picture</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <div class="flexbox" id="titleContainer">
+            <!--Image title goes here-->
+            <button class="material-symbols-outlined" id="deleteButton">
+                delete
+            </button>
+            <button class="material-symbols-outlined" id="editButton">
+                edit
+            </button>
+        </div>
+        <div class="flexbox" id="imageContainer">
+            <!--Image goes here-->
+        </div>
+        <div class="image-description" id="descriptionContainer">
+        </div>
+        <div class="star-rating">
+          <input type="radio" name="stars" id="star-5" value="5"/>
+          <label for="star-5"></label>
+
+          <input type="radio" name="stars" id="star-4" value="4"/>
+          <label for="star-4"></label>
+
+          <input type="radio" name="stars" id="star-3" value="3"/>
+          <label for="star-3"></label>
+
+          <input type="radio" name="stars" id="star-2" value="2"/>
+          <label for="star-2"></label>
+
+          <input type="radio" name="stars" id="star-1" value="1"/>
+          <label for="star-1"></label>
+        </div>
+
+        <div class="comment-box">
+            <h2>Edit Description</h2>
+            <form id="commentForm">
+                <textarea name="comment" placeholder="Say something" id="commentArea"></textarea>
+                <button type="submit">Submit Description</button>
+            </form>
+        </div>
+
+        <!--
+        <div class="comment-box">
+          <h2>Comments</h2>
+          <form action="#">
+              <textarea name="comment" placeholder="Say something"></textarea>
+              <input type="text" name="full_name" value="Name">
+              <button type="submit">Submit Comment</button>
+          </form>
+      </div>
+      -->
+
+      <!--
+      <div class="comment-section">
+          <div class="comment">
+              <div class="comment-header">
+                  <h3>Commenter Name</h3>
+                  <p>Comment Date</p>
+              </div>
+              <p>Comment Text</p>
+              <button type="button">Edit</button>
+          </div>
+      </div>
+      -->
+
+        <div class="popup-bg">
+            <div class="popup-content">
+                <div class="close">
+                    +
+                </div>
+                <h3>Rename image title</h3>
+                <form id="titleForm">
+                    <input type="text" placeholder="New name" name="title" id="title">
+                    <button type="submit">Rename</button>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="./script/zoomed_image.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" 
+        crossorigin="anonymous">
+        </script>
+    </body>
+</html>

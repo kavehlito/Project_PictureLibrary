@@ -1,0 +1,62 @@
+body{
+  
+    background-color: lightgrey;
+}
+
+
+div.gallery {
+    margin: 1vw;
+    margin-top: 40px;
+    /*border: 1px solid #ccc; */
+    border-radius: 25px;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+    justify-content: space-between;
+  }
+
+  div.gallery:hover img{
+    border: 2px solid black;
+  }
+
+  div.gallery img {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    object-fit: cover; 
+  }
+
+  div.desc {
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    
+  }
+
+  .star, .star:active, .star:link, .star:visited, .star:hover, .star:active {
+    content: '\2606';
+    width: 50px;
+    height: 50px;
+    font-family: Arial;
+    font-size: 50px;
+    color: black;
+    line-height: 50px;
+    text-decoration: none;
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  #ratingAlbums .gallery {
+    background-color: #a6a6a6;
+  }
+
+  #ratingAlbums .gallery:hover {
+    background-color: #b3b3b3;
+    transition: 0.2s ease;
+  }
+
+  #ratingAlbums .gallery:hover .star {
+    color: #f1efec;
+    opacity: 50%;
+  }
